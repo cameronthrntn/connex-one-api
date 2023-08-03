@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "ignorePatterns": ["dist"],
+  "rules": {
+    "no-only-tests/no-only-tests": "warn",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["warn"],
+    "no-undef": "off",
+    "no-useless-escape": "off"
+  },
+  "plugins": ["@typescript-eslint", "no-only-tests"]
+}

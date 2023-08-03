@@ -6,7 +6,7 @@ chai.use(chaiHttp);
 
 describe("/Metrics", function () {
   describe("200", function () {
-    it("Should return a plaintext metrics file", (done) => {
+    it("Should return a plaintext metrics file", done => {
       chai
         .request(app)
         .get("/metrics")
@@ -17,7 +17,7 @@ describe("/Metrics", function () {
           done();
         });
     });
-    it("Should include the default metrics", (done) => {
+    it("Should include the default metrics", done => {
       chai
         .request(app)
         .get("/metrics")
@@ -28,7 +28,7 @@ describe("/Metrics", function () {
           done();
         });
     });
-    it("Should include the garbage collection metrics", (done) => {
+    it("Should include the garbage collection metrics", done => {
       chai
         .request(app)
         .get("/metrics")
@@ -41,7 +41,7 @@ describe("/Metrics", function () {
     });
   });
   describe("403", function () {
-    it("Should return a 403 without a token", (done) => {
+    it("Should return a 403 without a token", done => {
       chai
         .request(app)
         .get("/metrics")
@@ -50,7 +50,7 @@ describe("/Metrics", function () {
           done();
         });
     });
-    it("Should return a 403 with an incorrect token", (done) => {
+    it("Should return a 403 with an incorrect token", done => {
       chai
         .request(app)
         .get("/metrics")

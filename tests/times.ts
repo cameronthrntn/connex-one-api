@@ -1,4 +1,3 @@
-import assert from "assert";
 import chai, { expect } from "chai";
 import chaiHttp from "chai-http";
 import app from "../server";
@@ -7,7 +6,7 @@ chai.use(chaiHttp);
 
 describe("/Times", function () {
   describe("200", function () {
-    it("Should return an epoch time", (done) => {
+    it("Should return an epoch time", done => {
       chai
         .request(app)
         .get("/time")
@@ -19,7 +18,7 @@ describe("/Times", function () {
           done();
         });
     });
-    it("Should return the current time", (done) => {
+    it("Should return the current time", done => {
       chai
         .request(app)
         .get("/time")
@@ -34,7 +33,7 @@ describe("/Times", function () {
     });
   });
   describe("403", function () {
-    it("Should return a 403 without a token", (done) => {
+    it("Should return a 403 without a token", done => {
       chai
         .request(app)
         .get("/time")
@@ -43,7 +42,7 @@ describe("/Times", function () {
           done();
         });
     });
-    it("Should return a 403 with an incorrect token", (done) => {
+    it("Should return a 403 with an incorrect token", done => {
       chai
         .request(app)
         .get("/time")
