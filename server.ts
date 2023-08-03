@@ -28,3 +28,5 @@ app.get("/time", (req: Request, res: Response) => {
 app.listen(port, () => {
   console.log(`[server]: running at http://localhost:${port}`);
 });
+
+export default app;
