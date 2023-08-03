@@ -6,8 +6,10 @@ dotenv.config();
 const app: Express = express();
 const port = process.env.PORT;
 
-app.get("/", (req: Request, res: Response) => {
-  res.send("Server running");
+app.get("/time", (req: Request, res: Response) => {
+  res.send({
+    epoch: Date.now(),
+  });
 });
 
 app.listen(port, () => {
