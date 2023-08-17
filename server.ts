@@ -1,7 +1,7 @@
 import express, { Express, Request, Response } from "express";
 import dotenv from "dotenv";
 import promMid from "express-prometheus-middleware";
-import middleware from "./middleware";
+import middleware from "./tokenCheck";
 
 dotenv.config();
 
