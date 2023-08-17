@@ -10,7 +10,8 @@
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": ["warn"],
     "no-undef": "off",
-    "no-useless-escape": "off"
+    "no-useless-escape": "off",
+    "@typescript-eslint/ban-ts-comment": "off"
   },
   "plugins": ["@typescript-eslint", "no-only-tests"]
 }
